@@ -15,7 +15,7 @@ import java.util.SortedMap;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-import org.idmap.core.IdMapping;
+import org.idmap.core.IdMappingImpl;
 
 public class BridgeDb {
     
@@ -38,7 +38,7 @@ public class BridgeDb {
         return 0;
     }
     
-    public SortedMap<String, IdMapping> run( final Collection<String> query_ids,
+    public SortedMap<String, IdMappingImpl> run( final Collection<String> query_ids,
                                              final String source_type,
                                              final String target_type,
                                              final String source_species,
@@ -74,7 +74,7 @@ public class BridgeDb {
     private final static void parseResponse(final Object input,
             final Set<String> in_types, final String target_species,
             final String target_type,
-            final Map<String, IdMapping> matched_ids,
+            final Map<String, IdMappingImpl> matched_ids,
             final Set<String> unmatched_ids) throws IOException {
         
         final List<String> res = (List<String>) input;
@@ -83,7 +83,7 @@ public class BridgeDb {
             if ( s1.length != 3 ) {
                 throw new IOException("illegal format: " + s);
             }
-            IdMapping idmap = new IdMapping();
+            IdMappingImpl idmap = new IdMappingImpl();
             idmap.setTargetSpecies(target_species);
             idmap.setTargetType(target_type);
             idmap.setSourceType(s1[1]);
