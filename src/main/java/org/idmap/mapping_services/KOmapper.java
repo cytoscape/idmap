@@ -17,7 +17,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class IdMapper {
+public class KOmapper {
 
     // https://github.com/cytoscape-ci/service-idmapping
     public static final String  UniProtKB_AC                = "UniProtKB-AC";

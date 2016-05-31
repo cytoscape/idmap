@@ -15,9 +15,11 @@ import java.util.SortedMap;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+import org.idmap.core.IdMapper;
+import org.idmap.core.IdMapping;
 import org.idmap.core.IdMappingImpl;
 
-public class BridgeDb {
+public class BridgeDb implements IdMapper {
     
     
     final SortedSet<String> unmatched_ids;
@@ -38,7 +40,7 @@ public class BridgeDb {
         return 0;
     }
     
-    public SortedMap<String, IdMappingImpl> run( final Collection<String> query_ids,
+    public SortedMap<String, IdMapping> run( final Collection<String> query_ids,
                                              final String source_type,
                                              final String target_type,
                                              final String source_species,
@@ -194,5 +196,11 @@ public class BridgeDb {
             sb.append(s);
         }
         return sb;
+    }
+
+    @Override
+    public Set<String> getMatchedIds() {
+        // TODO Auto-generated method stub
+        return null;
     }
 }
