@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.cxio</groupId>
-  <artifactId>cxio</artifactId>
-  <version>0.9.12</version>
-  <name>CX Serialization and De-serialization</name>
-  <description>Java classes for CX serialization and de-serialization</description>
+  <groupId>org.idmap</groupId>
+  <artifactId>idmap</artifactId>
+  <version>0.0.1</version>
+  <name>Id Mapping Client</name>
+  <description>Java classes for Id Mapping Client</description>
   <dependencies>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
