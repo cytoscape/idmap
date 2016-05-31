@@ -11,12 +11,25 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 import org.idmap.core.IdMapping;
 
 public class BridgeDb {
+    
+    
+    final SortedSet<String> unmatched_ids;
+    
+    
+    
     public static final boolean DEBUG = true;
 
+    private BridgeDb() {
+        unmatched_ids = new TreeSet<String>();
+    }
+    
+    
     public static void main(final String[] args) throws IOException {
         
         String url = "http://webservice.bridgedb.org:8185/batch"; 
@@ -41,7 +54,7 @@ public class BridgeDb {
         parseResponse(res, null, "", "Ag", null, null);
     }
     
-    public final static void parseResponse(final Object input,
+    private final static void parseResponse(final Object input,
             final Set<String> in_types, final String target_species,
             final String target_type,
             final Map<String, IdMapping> matched_ids,
