@@ -11,6 +11,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.SortedMap;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
@@ -20,15 +21,31 @@ public class BridgeDb {
     
     
     final SortedSet<String> unmatched_ids;
-    
-    
+    final URL url;
     
     public static final boolean DEBUG = true;
 
-    private BridgeDb() {
+    private BridgeDb(final URL url) {
         unmatched_ids = new TreeSet<String>();
+        this.url = url;
     }
     
+    public SortedSet<String> getUnmatchedIds() {
+        return  unmatched_ids;
+    }
+    
+    public long getTime() {
+        return 0;
+    }
+    
+    public SortedMap<String, IdMapping> run( final Collection<String> query_ids,
+                                             final String source_type,
+                                             final String target_type,
+                                             final String source_species,
+                                             final String target_species ) {
+     
+        return null;
+    }
     
     public static void main(final String[] args) throws IOException {
         
