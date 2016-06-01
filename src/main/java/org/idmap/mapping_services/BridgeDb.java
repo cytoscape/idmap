@@ -15,6 +15,7 @@ import java.util.SortedMap;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+import org.idmap.core.IdGuess;
 import org.idmap.core.IdMapper;
 import org.idmap.core.IdMapping;
 import org.idmap.core.IdMappingImpl;
@@ -200,6 +201,18 @@ public class BridgeDb implements IdMapper {
 
     @Override
     public Set<String> getMatchedIds() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public Map<String, IdMapping> map(Collection<String> query_ids, String source_type, String target_type, String source_species, String target_species) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public Map<String, IdGuess> guess(Collection<String> query_ids, String source_species) {
         // TODO Auto-generated method stub
         return null;
     }

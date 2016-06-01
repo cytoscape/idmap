@@ -45,9 +45,14 @@ public interface IdMapper {
      * 
      * @return a map of identifiers (for which a mapping exists) to IdMapping objects
      */
-    public Map<String, IdMapping> run( final Collection<String> query_ids,
+    public Map<String, IdMapping> map( final Collection<String> query_ids,
                                        final String source_type,
                                        final String target_type,
                                        final String source_species,
                                        final String target_species );
+    
+    
+    public Map<String, IdGuess> guess( final Collection<String> query_ids,
+                                       final String source_species );
+    
 }
